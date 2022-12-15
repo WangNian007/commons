@@ -18,9 +18,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
     private final List<T> content = new ArrayList<>();
 
     public PageImpl(List<T> content, Pageable pageable) {
-        if (content == null || content.isEmpty()) {
-            throw new IllegalArgumentException("PageImpl content must not be null!");
-        }
         this.pageable = pageable;
         this.content.addAll(content);
         this.total = this.content.size();
