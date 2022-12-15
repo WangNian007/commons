@@ -16,6 +16,10 @@ public class PageRequest extends AbstractPageRequest {
         this.excludeFields = excludeFields;
     }
 
+    public PageRequest(int page, int size) {
+        super(page, size);
+    }
+
     public String[] getIncludeFields() {
         return includeFields;
     }
