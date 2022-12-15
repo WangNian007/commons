@@ -8,4 +8,8 @@ public interface Pageable {
     int getPageNumber();
 
     int getPageSize();
+
+    String[] getIncludeFields();
+
+    String[] getExcludeFields();
 }
