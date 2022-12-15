@@ -23,7 +23,7 @@ public interface IEsService<T, ID> extends IService<T, ID> {
 
     boolean updateByQuery(T entity, String indices);
 
-    Optional<T> get(ID id, String... indices);
+    T get(ID id, String... indices);
 
     Page<T> page(T model, Pageable pageable, String... indices);
 }
