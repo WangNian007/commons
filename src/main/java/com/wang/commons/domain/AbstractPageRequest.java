@@ -8,8 +8,8 @@ import java.io.Serializable;
  */
 public abstract class AbstractPageRequest implements Pageable, Serializable {
     private static final long serialVersionUID = -1269392473660543762L;
-    private final int page;
-    private final int size;
+    private  int page;
+    private  int size;
 
     public AbstractPageRequest(int page, int size) {
 
@@ -25,6 +25,7 @@ public abstract class AbstractPageRequest implements Pageable, Serializable {
         this.size = size;
     }
 
+
     @Override
     public int getPageNumber() {
         return page;
@@ -33,5 +34,21 @@ public abstract class AbstractPageRequest implements Pageable, Serializable {
     @Override
     public int getPageSize() {
         return size;
+    }
+
+    public int getPage() {
+        return page;
+    }
+
+    public void setPage(int page) {
+        this.page = page;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 }
